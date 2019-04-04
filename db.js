@@ -3,14 +3,19 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
-  getUser: getUser,
-  getUsers: getUsers
 }
 
-function getUsers (db = connection) {
-  return db('users').select()
+function displayForm (db = connection) {
+  //
+  return
 }
 
-function getUser (id, db = connection) {
-  return db('users').where('id', id).first()
+function postForm (db = connection) {
+  //
+  return
+}
+
+function getPerson (id, db = connection) {
+  //
+  return
 }
