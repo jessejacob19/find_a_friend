@@ -5,9 +5,12 @@ const userRoutes = require('./routes/users')
 
 const server = express()
 
+server.use(express.static('public'))
 // Middleware
 
-server.engine('hbs', hbs({extname: 'hbs'}))
+server.engine('hbs', hbs({
+    defaultLayout: 'index',
+    extname: 'hbs'}))
 server.set('view engine', 'hbs')
 server.use(express.urlencoded({extended: true}))
 
