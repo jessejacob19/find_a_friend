@@ -1,11 +1,12 @@
 <div class="wrapper">
-    <form method="POST">
+    <form method="POST" >
         {{#each hobby}}
         <div class="hobbies">
-            <img src="./public/{{image_id}}"><input type="checkbox" name="{{hobby_name}}" value="{{hobby_name}}">
+            <img src="./public/{{image_id}}">
+            <input type="checkbox" name="{{hobby_name}}">
         </div>
         {{/each}}
-        <input type="text" name="userName">
+        <input type="text" name="name">
         <button>Find Friends!</button>
     </form>
 </div>
