@@ -5,8 +5,15 @@ const db = require('../db')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  let interests = db.getAllInterests()
-  res.render('form', {interests: interests})
+  db.getAllInterests()
+  .then(interests => {
+    console.log(interests)
+    res.render('form', {interests: interests})
+  }).catch(error => {
+    res.send('you have an error');
+    console.log('err:', error)
+  })
+  
 })
 
 router.post('/', (req, res) => {
