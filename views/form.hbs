@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <form method="POST">
+        {{#each hobby}}
+        <div class="hobbies">
+            <img src="./public/{{image_id}}"><input type="checkbox" name="{{hobby_name}}" value="{{hobby_name}}">
+        </div>
+        {{/each}}
+        <input type="text" name="userName">
+        <button>Find Friends!</button>
+    </form>
+</div>
