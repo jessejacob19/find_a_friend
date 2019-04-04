@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
   let interests = db.
-  res.render('', )
+  res.render('form', )
 })
 
 router.post('/', (req, res) => {
@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
 })
 
 router.get('/friends', (req, res) => {
-
+  res.render()
 })
 
 router.get('/friends/:id', (req, res) => {
