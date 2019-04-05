@@ -1,13 +1,18 @@
-<div class="wrapper">
+
+<div class="grid">
+    <H2>Select Your Interests:</H2>
     <form method="POST" >
-        {{#each interests}}
-        <div class="hobbies">
-            <img src="./images/{{image}}">
-            <label for="{{interest}}">{{interest}}</label>
-            <input type="checkbox" id="{{interest}}" name="{{interest}}">
+        <div class="wrapper"></div>
+            {{#each interests}}
+            <div>
+                <img src="./images/{{image}}">
+                <label for="{{interest}}">{{interest}}</label>
+                <input type="checkbox" id="{{interest}}" name="{{interest}}">
+            </div>
+            {{/each}}
         </div>
-        {{/each}}
+        <label>Name:</label><br>
         <input type="text" name="name">
         <button type="submit" value="submit">Find Friends!</button>
-    </form>
-</div>
+        </form>
+    </div>
