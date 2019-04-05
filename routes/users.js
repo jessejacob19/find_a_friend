@@ -23,7 +23,13 @@ router.post('/', (req, res) => {
 
 router.get('/friends', (req, res) => {
   let people = db.getPeople()
+  .then(interests => {
   res.render('listpeople', {people: people})
+}).catch(error => {
+  res.send('you have an error');
+    console.log('err:', error)
+  })
+  
 })
 
 router.get('/friends/:id', (req, res) => {
