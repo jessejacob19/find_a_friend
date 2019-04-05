@@ -106,5 +106,6 @@ img {
     height: 200px;
 }
 
+a { text-decoration: none; color:black; }
 a:visited { text-decoration: none; color:black; }
 a:hover { text-decoration: none; color:black }
