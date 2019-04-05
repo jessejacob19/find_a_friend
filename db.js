@@ -25,5 +25,5 @@ function getPerson (id, db = connection) {
 }
 function getPeople(db = connection) {
   //returns the list of all persons from the people table
-  return db('people').select()
+  return db('people').select().orderBy('id','desc')
 }
