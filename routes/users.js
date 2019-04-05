@@ -37,9 +37,8 @@ router.post('/', (req, res) => {
 })
 
 router.get('/friends', (req, res) => {
-  let people = db.getPeople()
-  console.log(people)
-  .then(interests => {
+  db.getPeople()
+  .then(people => {
   res.render('listpeople', {people: people})
 }).catch(error => {
   res.send('you have an error');
