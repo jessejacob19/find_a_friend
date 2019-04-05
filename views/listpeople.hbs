@@ -1,0 +1,60 @@
+
+
+<p> It's hard to make friends these days. Here are some people who are looking to make friends in your city</p>
+
+
+<div class = "container">
+
+
+    <div class="grid">
+       
+     {{#each people}}
+    <div class="grid">
+   
+        <a href="/friends/id"><div class="card">
+        
+            <h2>{{name}}</h2> 
+            <hr>
+                <br>
+                    {{#if basketball}}
+                    <h3>Basketball</h3>
+                    {{/if}}  
+                
+                    {{#if photography}}
+                    <h3>Photography</h3>
+                    {{/if}}  
+               
+                    {{#if dancing}}
+                    <h3>Dancing</h3>
+                    {{/if}}  
+                
+                    {{#if hiking}}
+                    <h3>Hiking</h3>
+                    {{/if}}  
+                
+                    {{#if racing}}
+                    <h3>Racing</h3>
+                    {{/if}}  
+                
+                    {{#if gaming}}
+                    <h3>Gaming</h3>
+                    {{/if}}  
+               
+                    {{#if geocaching}}
+                    <h3>Geocaching</h3>
+                    {{/if}}  
+                
+                    {{#if scrapbooking}}
+                    <h3>Scrapbooking</h3>
+                    {{/if}}  
+                
+                    {{#if writing}}
+                    <h3>Writing</h3>
+                    {{/if}}  
+                <br>
+
+        </div></a>
+    
+    </div>    
+    {{/each}}
+</div>
