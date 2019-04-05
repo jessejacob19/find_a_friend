@@ -100,7 +100,11 @@ button:hover {
     cursor: pointer;
 }
 
+
 img {
     width: 300px;
     height: 200px;
 }
+
+a:visited { text-decoration: none; color:black; }
+a:hover { text-decoration: none; color:black }

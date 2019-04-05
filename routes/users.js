@@ -23,6 +23,7 @@ router.post('/', (req, res) => {
 
 router.get('/friends', (req, res) => {
   let people = db.getPeople()
+  console.log(people)
   .then(interests => {
   res.render('listpeople', {people: people})
 }).catch(error => {
