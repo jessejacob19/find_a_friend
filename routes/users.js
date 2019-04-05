@@ -17,8 +17,23 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  let personObj = {};
   let person = req.body;
-  db.addPerson(person);
+  let interests = ['basketball', 'photography', 'dancing','writing', 'hiking', 'racing', 'gaming', 'geocaching', 'scrapbooking']
+  personObj.name = person.name;
+  interests.forEach((interest) => {
+    if(person[interest] == "on") {
+      personObj[interest] = true;
+    } else {
+      personObj[interest] = false;
+    }
+  })
+  
+  db.addPerson(personObj)
+  .then(() => {res.redirect('/friends');})
+  .catch(error => {
+    console.log('error: ', error)
+  })
 })
 
 router.get('/friends', (req, res) => {
